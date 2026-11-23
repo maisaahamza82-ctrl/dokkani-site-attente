@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sécurité : aucune ressource ni connexion externe n'est autorisée sur cette page -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Aperçu interactif de DOKKANI : démonstration avec des données fictives des espaces client et commerçant.">
+  <meta name="theme-color" content="#4C4CF4">
+  <title>Aperçu interactif — DOKKANI (démonstration)</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Aller au contenu</a>
+
+  <div class="demo-banner" role="note">
+    <span class="demo-banner-dot" aria-hidden="true"></span>
+    <strong>DOKKANI — Aperçu interactif, version de démonstration</strong>
+    <span class="demo-banner-sub">Données fictives · aucune commande, aucun paiement, aucune donnée envoyée</span>
+  </div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#/" aria-label="Accueil de l'aperçu DOKKANI">
+        <img src="logo.png" alt="" width="40" height="40">
+        <span>DOKKANI</span>
+        <span class="brand-tag">Aperçu</span>
+      </a>
+      <nav class="topnav" aria-label="Espaces de démonstration">
+        <a href="#/client" data-nav="client">Espace client</a>
+        <a href="#/commercant" data-nav="commercant">Espace commerçant</a>
+        <a class="topnav-cart" href="#/client/panier" data-nav="panier" aria-label="Panier">
+          <span data-icon="shopping-cart"></span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="container" tabindex="-1">
+    <noscript>
+      <p class="notice">Cette démonstration a besoin de JavaScript pour fonctionner.</p>
+    </noscript>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>DOKKANI</strong> — Aperçu interactif. Toutes les boutiques, produits,
+        clients et commandes affichés sont fictifs.
+      </div>
+      <div class="footer-links">
+        <a href="../">Site officiel</a>
+        <a href="https://preinscription.dokkani-dz.com/" rel="noopener">Se préinscrire</a>
+        <button class="link-btn" type="button" id="resetDemo">Réinitialiser la démo</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="icons.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
